@@ -91,7 +91,8 @@ public void reloadImage0(){
 			image = ImageIO.read(resource);
 		}
 		catch(IOException e){
-			e.printStackTrace();
+			e.printStackTrace();]
+			
 		}
 	}
 
@@ -101,13 +102,13 @@ public void reloadImage0(){
 		Thread thread1 = new Thread(new Runnable(){
 			public void run(){
 				isAttacking = true;
-				for(int ctr = 0; ctr < 11; ctr++){
+				for(int ctr = 0; ctr < 3; ctr++){
 					try {
 						if (right == true){
 							resource = getClass().getResource("attack/attack"+ctr+".png");
 						}
 						else{
-							resource = getClass().getResource("attack/attac"+ctr+".png");
+							resource = getClass().getResource("attack/attack"+ctr+".png");
 						}
 						try{
 							image = ImageIO.read(resource);
@@ -121,7 +122,9 @@ public void reloadImage0(){
 						e.printStackTrace();
 					}
 				}
+				draw.checkCollision();
 				isAttacking = false;
+				idle();
 				
 			}
 		});
