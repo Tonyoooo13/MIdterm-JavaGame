@@ -91,8 +91,11 @@ public class Draw extends JComponent{
 		g.drawImage(charP, 5, 5, this);
 
 		g.setColor(Color. RED);
-		g.fillRect(60, 15, life * 2, 20);
+		g.fillRect(60, 15, 300, 20);
 
+		g.setColor(Color. BLUE);
+		g.fillRect(60, 15, life * 2, 20);
+		
 		g.drawImage(monster1.image, monster1.xPos, monster1.yPos, this);
 		g.drawImage(monster2.image, monster2.xPos, monster2.yPos, this);
 		g.drawImage(monster3.image, monster3.xPos, monster3.yPos, this);
